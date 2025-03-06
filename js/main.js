@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaButton = document.querySelector('.cta-button');
     if (ctaButton) {
         ctaButton.addEventListener('click', () => {
-            alert('Thank you for your interest! This is a demo button.');
+            alert('Eventually, this will redirect into the funnel.');
         });
     }
 
@@ -66,5 +66,74 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+    });
+
+    // Mobile Menu functionality
+    const menuButton = document.querySelector('.menu-button');
+    const menuContainer = document.querySelector('.menu-container');
+    const menuLinks = document.querySelectorAll('.nav-links a, .nav-socials a');
+    
+    // Toggle menu
+    menuButton.addEventListener('click', () => {
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', !isExpanded);
+        menuContainer.classList.toggle('active');
+        menuButton.textContent = isExpanded ? 'Menu' : 'Close';
+        
+        if (!isExpanded) {
+            // Focus first menu item when opening
+            menuLinks[0].focus();
+        }
+    });
+    
+    // Handle keyboard navigation
+    menuContainer.addEventListener('keydown', (e) => {
+        const focusableElements = Array.from(menuLinks);
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+        const isTabPressed = e.key === 'Tab';
+        
+        // Handle Tab and Shift+Tab
+        if (isTabPressed) {
+            if (e.shiftKey) {
+                if (document.activeElement === firstFocusable) {
+                    lastFocusable.focus();
+                    e.preventDefault();
+                }
+            } else {
+                if (document.activeElement === lastFocusable) {
+                    firstFocusable.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+        
+        // Close menu on Escape
+        if (e.key === 'Escape') {
+            menuContainer.classList.remove('active');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.textContent = 'Menu';
+            menuButton.focus();
+        }
+    });
+    
+    // Close menu when clicking a link
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuContainer.classList.remove('active');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.textContent = 'Menu';
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!menuButton.contains(e.target) && 
+            !menuContainer.contains(e.target) && 
+            menuContainer.classList.contains('active')) {
+            menuContainer.classList.remove('active');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.textContent = 'Menu';
+        }
     });
 }); 

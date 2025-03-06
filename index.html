@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A modern website boilerplate">
-    <title>Modern Website</title>
+    <meta name="description" content="ReefBuds - Engineering natural biocrete that supports local ecologies and gets stronger while oxygenating its surroundings.">
+    <title>ReefBuds - Sustainable Marine Infrastructure</title>
     <link rel="stylesheet" href="css/styles.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <main>
-        <header>
-          <nav>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content" role="main">
+        <header role="banner">
+          <nav role="navigation" aria-label="Main navigation">
               <div class="logo">
                   <span class="type-heading">REEFBUDS</span>
               </div>
-              <ul class="nav-links">
-                  <li><a href="#home" class="type-link">Home</a></li>
-                  <li><a href="#about" class="type-link">About</a></li>
-                  <li><a href="#services" class="type-link">Services</a></li>
-                  <li><a href="#contact" class="type-link">Contact</a></li>
-              </ul>
-              <ul class="nav-socials">
-                  <li><a href="#" class="type-link"><i class="fab fa-facebook"></i></a></li>
-                  <li><a href="#" class="type-link"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#" class="type-link"><i class="fab fa-x-twitter"></i></a></li>
-              </ul>
+              <button class="menu-button type-body" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">Menu</button>
+              <div id="mobile-menu" class="menu-container" role="menu">
+                <div class="menu-content">
+                  <ul class="nav-links" role="menubar">
+                      <li role="none"><a href="#home" class="type-link" role="menuitem">Home</a></li>
+                      <li role="none"><a href="#about" class="type-link" role="menuitem">Mission</a></li>
+                      <li role="none"><a href="#contact" class="type-link" role="menuitem">Our Team</a></li>
+                      <li role="none"><a href="#services" class="type-link" role="menuitem">Work With Us</a></li>
+                  </ul>
+                  <ul class="nav-socials" aria-label="Social media links">
+                      <a href="#" class="type-link" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                      <a href="#" class="type-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                      <a href="#" class="type-link" aria-label="Twitter"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+                  </ul>
+                </div>
+              </div>
           </nav>
         </header>
 
-        <section id="hero">
+        <section id="hero" role="region" aria-label="Hero">
             <h1 class="type-title">Breathing new life into construction materials.</h1>
             <p class="type-body-large">We've engineered a natural biocrete that not only supports local ecologies, but gets stronger while oxygenating it's surroundings.</p>
             <div class="cta-button-container">
@@ -47,7 +53,7 @@
             </div>
         </section>
 
-        <section id="stats">
+        <section id="stats" role="region" aria-label="Statistics">
           <div class="stats-container">
             <div class="stats-content">
               <h2 class="type-stats-heading">We've only just begun.</h2>
@@ -70,7 +76,7 @@
           </div>
         </section>
         
-        <section id="product">
+        <section id="product" role="region" aria-label="Product features">
           <div class="product-container">
             <div class="product-content">
               <h2 class="type-heading-1">Engineered to support abundance, naturally.</h2>
@@ -109,7 +115,7 @@
           </div>
         </section>
 
-        <section id="composition">
+        <section id="composition" role="region" aria-label="Product composition">
           <div class="composition-container">
             <div class="composition-content">
               <div class="composition-copy">
@@ -117,72 +123,113 @@
                 <p class="type-body-large">Basically, we do trash alchemy — we collect organic and inorganic byproduct from industrial sectors and build structures that revitalize the ocean. It's that simple.</p>
               </div>
               <div class="composition-image">
-                <img src="images/composition.jpg" alt="Biocrete composition analysis" />
+                <img src="assets/photos/reefbud.jpg" alt="Biocrete composition analysis" />
               </div>
             </div>
             <div class="composition-grid">
               <div class="composition-item">
                 <h3 class="type-subheading">Agricultral byproduct</h3>
-                <p class="type-body">Organic compounds that strengthen over time while supporting microbial growth.</p>
+                <p class="type-body-small">Organic compounds that strengthen over time while supporting microbial growth.</p>
               </div>
               <div class="composition-item">
                 <h3 class="type-subheading">Porous minerals</h3>
-                <p class="type-body">Increase speed of calcification and permeability of structure.</p>
+                <p class="type-body-small">Increase speed of calcification and permeability of structure.</p>
               </div>
               <div class="composition-item">
                 <h3 class="type-subheading">Metallic oxides</h3>
-                <p class="type-body">Energize surrounding waters to amplify phytoplankton and algae receptivity.</p>
+                <p class="type-body-small">Energize surrounding waters to amplify phytoplankton and algae receptivity.</p>
               </div>
               <div class="composition-item">
                 <h3 class="type-subheading">Activated charcoal</h3>
-                <p class="type-body">Maintains optimal conditions for marine life while preventing erosion.</p>
+                <p class="type-body-small">Maintains optimal conditions for marine life while preventing erosion.</p>
               </div>
               <div class="composition-item">
                 <h3 class="type-subheading">Recycled glass</h3>
-                <p class="type-body">Reduces the need for filler materials while supporting green initiatives.</p>
+                <p class="type-body-small">Reduces the need for filler materials while supporting green initiatives.</p>
               </div>
               <div class="composition-item">
                 <h3 class="type-subheading">Ocean water</h3>
-                <p class="type-body">Provides ideal pH levels to activate the structure's calcification process.</p>
+                <p class="type-body-small">Provides ideal pH levels to activate the structure's calcification process.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="results">
+        <section id="results" role="region" aria-label="Project results">
           <div class="results-container">
             <div class="results-content">
-              <h2 class="type-heading-1">Nearly 20 years of revitalizing marine habitats.</h2>
+              <h2 class="type-heading-1">Nearly 20 years of real results.</h2>
               <p class="type-body-large">Our biocrete has been successfully deployed in various marine environments, demonstrating consistent performance and ecological benefits.</p>
             </div>
             <div class="gallery-container">
               <div class="gallery-buttons">
                 <button class="gallery-button active" data-location="bali">
-                  <span class="type-body">Bali, Indonesia</span>
+                  <span class="type-body">Boracay Island</span>
                 </button>
                 <button class="gallery-button" data-location="philippines">
-                  <span class="type-body">Philippines</span>
+                  <span class="type-body">Anilao</span>
                 </button>
                 <button class="gallery-button" data-location="thailand">
-                  <span class="type-body">Thailand</span>
+                  <span class="type-body">Rosario</span>
                 </button>
                 <button class="gallery-button" data-location="malaysia">
-                  <span class="type-body">Malaysia</span>
+                  <span class="type-body">Cavite</span>
                 </button>
               </div>
               <div class="gallery-image">
-                <img src="images/results-bali.jpg" alt="ReefBuds deployment in Bali, Indonesia" class="active" data-location="bali">
-                <img src="images/results-philippines.jpg" alt="ReefBuds deployment in Philippines" data-location="philippines">
-                <img src="images/results-thailand.jpg" alt="ReefBuds deployment in Thailand" data-location="thailand">
-                <img src="images/results-malaysia.jpg" alt="ReefBuds deployment in Malaysia" data-location="malaysia">
+                <img src="assets/photos/Boracay.JPG" alt="ReefBuds deployment in Bali, Indonesia" class="active" data-location="bali">
+                <img src="assets/photos/coral1.jpg" alt="ReefBuds deployment in Philippines" data-location="philippines">
+                <img src="assets/photos/coral2.jpg" alt="ReefBuds deployment in Thailand" data-location="thailand">
+                <img src="assets/photos/coral3.jpg" alt="ReefBuds deployment in Malaysia" data-location="malaysia">
               </div>
             </div>
           </div>
         </section>
     </main>
 
-    <footer>
-        <p class="type-body-small"><i class="far fa-copyright"></i> 2024 Your Company. All rights reserved.</p>
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="type-heading">REEFBUDS</span>
+                    <p class="type-body">Restoring abundance to aquatic ecosystems in Louisiana, the Philippines, and next, your community.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3 class="type-subheading">Company</h3>
+                        <ul>
+                            <li><a href="#about" class="type-body">About</a></li>
+                            <li><a href="#services" class="type-body">Services</a></li>
+                            <li><a href="#contact" class="type-body">Contact</a></li>
+                        </ul>
+                    </div>
+           
+                    <div class="footer-section">
+                        <h3 class="type-subheading">Connect</h3>
+                        <a href="mailto:info@reefbuds.com">
+                          <div class="footer-contact">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <p class="type-link">info@reefbuds.com</p>
+                          </div>
+                        </a>
+                        
+                        <ul class="footer-socials">
+                            <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#" aria-label="Twitter"><i class="fab fa-x-twitter" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="type-body-small"><i class="far fa-copyright" aria-hidden="true"></i> 2025 ReefBuds. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#terms" class="type-body-small">Terms of Service</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
