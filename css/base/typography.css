@@ -1,0 +1,114 @@
+/* Typography Styles */
+.type-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.type-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.type-heading-1 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.type-subheading {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.type-stats-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.type-stats {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: hsla(var(--primary-hsl), 1);
+    margin-bottom: var(--space-xs);
+}
+
+.type-body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.type-body-large {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.type-body-small {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 400;
+}
+
+.type-caption {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: hsla(var(--text-hsl), 0.8);
+}
+
+.type-link {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.type-link:hover {
+    color: hsla(var(--primary-hsl), 1);
+}
+
+/* Animation for text elements */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+} 
